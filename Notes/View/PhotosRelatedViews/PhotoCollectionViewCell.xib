@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="Notes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4000" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-1o-Kri" userLabel="Main Image View">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="ToC-zS-P80" userLabel="Selection Image View">
+                        <rect key="frame" x="20" y="20" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="5HP-S9-vu4"/>
+                            <constraint firstAttribute="width" constant="22" id="Bpa-ts-goz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ToC-zS-P80" secondAttribute="bottom" constant="8" id="7bb-Yw-U3B"/>
+                <constraint firstItem="xTE-1o-Kri" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HRA-6h-1b0"/>
+                <constraint firstAttribute="trailing" secondItem="xTE-1o-Kri" secondAttribute="trailing" id="Mo4-6r-Ks2"/>
+                <constraint firstAttribute="bottom" secondItem="xTE-1o-Kri" secondAttribute="bottom" id="cV2-P6-Y3y"/>
+                <constraint firstAttribute="trailing" secondItem="ToC-zS-P80" secondAttribute="trailing" constant="8" id="gnF-Cg-xLO"/>
+                <constraint firstItem="xTE-1o-Kri" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pFl-6M-0fx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="mainImageView" destination="xTE-1o-Kri" id="YE0-Qu-pZC"/>
+                <outlet property="selectionImageView" destination="ToC-zS-P80" id="Y4w-Up-Sm6"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Unchecked" width="22" height="22"/>
+    </resources>
+</document>
